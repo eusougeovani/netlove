@@ -1,0 +1,208 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    background-color: #141414;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #111;
+    padding: 1rem 2rem;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    display: block;
+    width: 120px;
+    min-width: 80px;
+    max-width: 180px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
+nav a {
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s, transform 0.3s;
+    padding: 0.5rem 1rem;
+    margin-left: 0;
+    margin-right: 1rem;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #e50914;
+    transform: scale(1.05);
+}
+
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 10px;
+    padding: 20px;
+}
+
+.carousel-item {
+    flex: none;
+    width: 300px;
+    height: 170px;
+    scroll-snap-align: start;
+    position: relative;
+    cursor: pointer;
+}
+
+.carousel-item video,
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+    padding: 2rem;
+}
+
+.item video {
+    width: 100%;
+    height: 220px;
+    border-radius: 8px;
+    transition: 
+        transform 0.2s,
+        filter 0.3s,
+        box-shadow 0.3s;
+    cursor: pointer;
+    filter: brightness(0.5);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.7);
+    object-fit: cover;
+}
+
+.item video:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 1000;
+    padding: 1rem;
+}
+
+.overlay-content {
+    max-width: 800px;
+    background-color: #222;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.overlay-content video,
+.overlay-content img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.overlay p {
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+.card {
+    background: #222;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 600px;
+    text-align: center;
+    width: 90vw;
+    max-width: 400px;
+    padding: 1rem;
+}
+
+.card video {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    max-height: 50vh;
+    object-fit: contain;
+}
+
+.card button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background: #e50914;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Ajustes para telas pequenas */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0.5rem;
+    }
+
+    .logo {
+        width: 90px;
+        margin-bottom: 0.5rem;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        padding: 0.5rem;
+    }
+
+    .card {
+        padding: 0.5rem;
+        max-width: 95vw;
+    }
+
+    .card video {
+        max-height: 30vh;
+    }
+}

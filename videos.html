@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NETLOVE :: VÍDEOS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" type="image/png" href="icon_netlove.png">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="videosstyles.css" />
+</head>
+
+<body>
+  <header>
+    <a href="index.html"><img src="banner_netlove.png" alt="Logo NETLOVE" class="logo"></a>
+        <nav><a href="homepage.html">Início</a><a href="fotos.html">Fotos</a><a href="videos.html">Vídeos</a><a
+                href="surpresa.html">Surpresa!</a></nav>
+  </header>
+  <section class="gallery">
+    <div class="item" onclick="openCard('Aleluia... Aleluia... Forrozinho no Centro.', 'video (1).mp4')">
+      <video src="filme/video (1).mp4" loop preload="metadata"></video>
+    </div>
+    <div class="item" onclick="openCard('A Poleposition indo ver o barraco.', 'video (2).mp4')">
+      <video src="filme/video (2).mp4" loop preload="metadata"></video>
+    </div>
+    <div class="item" onclick="openCard('Tá repreendido . . .', 'video (3).mp4')">
+      <video src="filme/video (3).mp4" loop preload="metadata"></video>
+    </div>
+    <div class="item" onclick="openCard('O Cego que perdeu os 2 olhos. Que tistreza.', 'video (4).mp4')">
+      <video src="filme/video (4).mp4" loop preload="metadata"></video>
+    </div>
+    <div class="item" onclick="openCard('Um pouco de dengo não faz mal a ninguém.', 'video (5).mp4')">
+      <video src="filme/video (5).mp4" loop preload="metadata"></video>
+    </div>
+    <div class="item" onclick="openCard('DQueiróz Folia.', 'video (6).mp4')">
+      <video src="filme/video (6).mp4" loop preload="metadata"></video>
+    </div>
+    <div class="item" onclick="openCard('Pense em mim... chore por mim...', 'video (7).mp4')">
+      <video src="filme/video (7).mp4" loop preload="metadata"></video>
+    </div>
+    <div class="item" onclick="openCard('Reggae é vida.', 'video (8).mp4')">
+      <video src="filme/video (8).mp4" loop preload="metadata"></video>
+    </div>
+    <div class="item" onclick="openCard('Ele não tem instabilidade...', 'video (9).mp4')">
+      <video src="filme/video (9).mp4" loop preload="metadata"></video>
+    </div>
+    <div class="item" onclick="openCard('Ai meu c* kkkkk.', 'video (10).mp4')">
+      <video src="filme/video (10).mp4" loop preload="metadata"></video>
+    </div>
+    <div class="item" onclick="openCard('Aloha significa Família.', 'video (11).mp4')">
+      <video src="filme/video (11).mp4" loop preload="metadata"></video>
+    </div>
+    <div class="item" onclick="openCard('Te amar é um ato de amor... e ódio.', 'video (12).mp4')">
+      <video src="filme/video (12).mp4" loop preload="metadata"></video>
+    </div>
+    <div class="item" onclick="openCard('Tô aqui... Tô lá...', 'video (13).mp4')">
+      <video src="filme/video (13).mp4" loop preload="metadata"></video>
+    </div>
+    <div class="item" onclick="openCard('O azul é a cor da alegria . . .', 'video (14).mp4')">
+      <video src="filme/video (14).mp4" loop preload="metadata"></video>
+    </div>
+    <div class="item" onclick="openCard('Alegria contagiante', 'video (15).mp4')">
+      <video src="filme/video (15).mp4" loop preload="metadata"></video>
+    </div>
+    <div class="item" onclick="openCard('Tenha fé no azul que tá no frevo, Que azul é a cor da alegria', 'video (16).mp4')">
+      <video src="filme/video (16).mp4" loop preload="metadata"></video>
+    </div>
+  </section>
+  <div class="overlay" id="overlay" onclick="closeCard()">
+    <div class="card" onclick="event.stopPropagation()">
+      <video id="cardVideo" src="" controls autoplay
+        style="width:100%;border-radius:5px;max-height:50vh;object-fit:contain"></video>
+      <p id="cardText"></p>
+      <button onclick="closeCard()">Fechar</button>
+    </div>
+  </div>
+  <script>
+    // Play/pause nos vídeos da galeria ao passar o mouse
+    document.querySelectorAll('.gallery .item video').forEach(video => {
+      video.addEventListener('mouseenter', function () {
+        video.muted = true;
+        video.currentTime = 0;
+        video.play();
+      });
+      video.addEventListener('mouseleave', function () {
+        video.pause();
+        video.currentTime = 0;
+      });
+    });
+
+    function openCard(text, videoSrc) {
+      document.getElementById('cardText').innerText = text;
+      const video = document.getElementById('cardVideo');
+      video.src = videoSrc;
+      video.muted = false; // Garante áudio no overlay
+      video.load();
+      document.getElementById('overlay').style.display = 'flex';
+    }
+
+    function closeCard() {
+      document.getElementById('overlay').style.display = 'none';
+      const video = document.getElementById('cardVideo');
+      video.pause();
+      video.src = '';
+    }
+  </script>
+</body>
+
+</html>

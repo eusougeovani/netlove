@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NETLOVE :: LOGIN</title>
+    <link rel="icon" type="image/png" href="icon_netlove.png">
+    <link rel="stylesheet" href="indexstyle.css" />
+</head>
+
+<body>
+    <div class="main-container">
+        <img src="banner_netlove.png" alt="Logo netlove" class="logo">
+        <div class="profiles">
+            <div class="profile" onclick="solicitarSenha('#')">
+                <img src="avatar_geovani.png" alt="Perfil Geovani">
+                <div class="profile-name">Geovani</div>
+            </div>
+            <div class="profile" onclick="solicitarSenha('homepage.html')">
+                <img src="avatar_lili.png" alt="Perfil Lili">
+                <div class="profile-name">Lili</div>
+            </div>
+            <div class="profile" onclick="solicitarSenha('#')">
+                <img src="avatar_morgana.png" alt="Perfil Morgana">
+                <div class="profile-name">Morgana</div>
+            </div>
+            <div class="profile" onclick="solicitarSenha('#')">
+                <img src="avatar.png" alt="Perfil Convidado">
+                <div class="profile-name">Convidado</div>
+            </div>
+        </div>
+    </div>
+
+    <audio id="clickSound">
+        <source src="som/netflix.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        const senhas = {
+            'geovani.html': '92c1',
+            'inicial.html': '0311',
+            'morgana.html': '7b36',
+            'convidado.html': 'a102'
+        };
+
+        window.onload = function () {
+            const audio = document.getElementById('clickSound');
+            audio.currentTime = 0;
+            audio.play().catch(() => {
+            });
+        };
+
+        function solicitarSenha(pagina) {
+            const audio = document.getElementById('clickSound');
+            audio.currentTime = 0;
+            audio.play();
+
+            if (senhas[pagina] === '') {
+                window.location.href = pagina;
+                return;
+            }
+
+            const senhaDigitada = prompt("Informe o PIN para acessar este perfil.");
+            if (senhaDigitada === senhas[pagina]) {
+                window.location.href = pagina;
+            } else {
+                alert("Esqueceu seu PIN? A Dica de Senha é: Data do nosso match (DDMM).");
+            }
+        }
+    </script>
+</body>
+
+</html>
