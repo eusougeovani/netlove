@@ -2,125 +2,364 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NETLOVE :: INÍCIO</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" type="image/png" href="icon_netlove.png">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel='stylesheet'
-        href='https://fonts.googleapis.com/css2?family=Short+Stack&amp;family=Homemade+Apple&amp;display=swap'>
-    <link rel="stylesheet" href="hpstyle.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NETLOVE :: Início</title>
+  <link rel="icon" type="image/png" href="icon_netlove.png">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="hpstyle.css" />
 </head>
 
 <body>
-    <header>
-        <a href="index.html"><img src="banner_netlove.png" alt="Logo NETLOVE" class="logo"></a>
-        <nav><a href="homepage.html">Início</a><a href="fotos.html">Fotos</a><a href="videos.html">Vídeos</a><a
-                href="surpresa.html">Surpresa!</a></nav>
-    </header>
-    <svg xmlns="http://www.w3.org/2000/svg" id="svg5" version="1.1" viewBox="0 0 502.98 108.61">
-        <path id="heart"
-            d="M213.35 29.43c19.41-15.19 33.68 10.86 37.73 18.82-.28-13.61 11.64-40.98 25.94-34.01 32.3 15.74-15.88 83.8-26.4 81.76-13.24-9-51.35-53.3-37.27-66.57Z"
-            style="fill:#ff9999;stroke:#ff9999;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-        <path pathLength="1" id="line"
-            d="M5.32 78.13c.96-.01 5-8.5 5.54-8.54.58-.05 6.1 8.51 7.1 8.51 3.66 0 9.29.06 10.71.05 2.53-.01 4.82-72.88 4.82-72.88l4.76 97.28 3.97-24.45 20.45-.22C64 77.86 77.1 63.66 78.36 63.8c1.31.15 6.68 14.08 7.94 14.07 2.3-.03 33.32.04 35.76.02.96 0 5-8.5 5.53-8.53.59-.05 6.1 8.51 7.1 8.5 3.66 0 9.3.07 10.72.06 2.53-.02 4.81-72.89 4.81-72.89l4.77 97.28 3.97-24.44s83.34-3.33 74.69 7.67c-8.65 11-45.3-42.94-31.65-53.58 25.6-19.96 49.96 36.94 40.26 36.5-12.2-.53 1.8-62.32 23.41-51.7 32.24 15.86-17.56 84.92-26.4 81.77-5.73-2.05-.68-21.68 31.4-26.58 26.65-6.42 29.5 2.35 52.62 7.11 2.53-.02 4.82-72.89 4.82-72.89l4.76 97.28 3.97-24.44 20.45-.22c1.31-.02 14.41-14.22 15.68-14.07 1.32.15 6.7 14.08 7.95 14.07 2.29-.03 33.32.04 35.76.02.95 0 5-8.5 5.53-8.54.58-.04 6.1 8.52 7.1 8.52 3.66 0 9.3.06 10.72.05 2.53-.02 4.81-72.89 4.81-72.89l4.77 97.28 3.97-24.44 20.45-.23c1.31-.01 14.4-14.22 15.68-14.07 1.32.16 6.69 14.09 7.94 14.07" />
-    </svg>
-    <main>
-        <div id="cronometro" class="cronometro"></div>
-    </main>
+  <header class="topbar">
+    <img src="banner_netlove.png" alt="NETLOVE" class="logo" />
+    <div class="icons">
+      <a href="https://youtube.com/playlist?list=PLoeB-U5U6VTPFARNHOvVFtnefjMtdrLbf&si=ckvFUCkTQ7mbhrPe" title="Playlist">🎧</a>
+      <a href="index.html" title="Sair">❌</a>
+    </div>
+  </header>
 
-    <form>
-        <div class="wrapper">
-            <input type="checkbox" id="ck1" onClick="check()" />
-            <label for="ck1">I</label>
-            <input type="checkbox" id="ck2" onClick="check()" />
-            <label for="ck2">love</label>
-            <input type="checkbox" id="ck3" onClick="check()" />
-            <label for="ck3">you</label>
-            <span>(Click nas Palavras)</span>
+  <main>
+    <!-- Banner Principal -->
+    <section class="hero">
+      <img src="galeria/img (46).jpg" alt="Banner Início" class="hero-bg">
+      <div class="hero-content">
+        <h1 class="title">Between Sfiha and Sunset<br><span>Entre Esfihas e Pôr do Sol</span></h1>
+        <p>Depois de um encontro inesperado e um gesto de cuidado,
+          Geo e Lili descobriram no outro amor, parceria e risadas.
+          Entre estudos, shows, esfihas, milkshakes e pôr do sol,
+          eles aprendem que o maior filme é a vida que constroem juntos.</p>
+        <div class="buttons">
+          <button class="btn play">▶ Assistir</button>
+          <button class="btn info">Em Breve</button>
         </div>
-    </form>
-    <br><br><br>
-    <section>
-        <p class="cartinha">
-            <br>Elisângela, meu amor,<br>
-            Desde que você chegou, minha vida virou um bom forró,<br>
-            daqueles que a gente sente no peito, como nas músicas de<br>
-            Adelmário Coelho.<br>
-            Quando tô longe, bate uma saudade bê que só você cura.<br>
-            Você é meu xodó, minha paz,<br>
-            meu par perfeito pra dançar a vida toda de rostinho colado.<br>
-            Te amo mais do qualquer refrão consegue cantar!<br>
-            Com amor, Geovani.<br>
-        </p>
+      </div>
     </section>
 
-    <section class="youtube-playlist">
-        <h2 class="playlist-title">Nossa Trilha Sonora</h2>
-        <iframe width="560" height="315"
-            src="https://www.youtube.com/embed/videoseries?si=TtmI88NM0atnRc31&amp;list=PLoeB-U5U6VTPFARNHOvVFtnefjMtdrLbf"
-            title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <!-- Galeria Fotos -->
+    <section class="continue">
+      <h2>📷 Fotos</h2>
+      <div class="carousel" data-carousel="fotos">
+        <button class="carousel-btn prev" aria-label="Anterior">‹</button>
+        <div class="carousel-track cards">
+          <div class="card"><img src="galeria/img (1).jpeg" alt="img1"></div>
+          <div class="card"><img src="galeria/img (1).jpg" alt="img2"></div>
+          <div class="card"><img src="galeria/img (1).png" alt="img3"></div>
+          <div class="card"><img src="galeria/img (1).webp" alt="img4"></div>
+          <div class="card"><img src="galeria/img (2).jpg" alt="img5"></div>
+          <div class="card"><img src="galeria/img (2).webp" alt="img6"></div>
+          <div class="card"><img src="galeria/img (3).jpg" alt="img7"></div>
+          <div class="card"><img src="galeria/img (3).webp" alt="img8"></div>
+          <div class="card"><img src="galeria/img (4).jpg" alt="img9"></div>
+          <div class="card"><img src="galeria/img (4).webp" alt="img10"></div>
+          <div class="card"><img src="galeria/img (5).jpg" alt="img11"></div>
+          <div class="card"><img src="galeria/img (5).webp" alt="img12"></div>
+          <div class="card"><img src="galeria/img (6).jpg" alt="img13"></div>
+          <div class="card"><img src="galeria/img (6).webp" alt="img14"></div>
+          <div class="card"><img src="galeria/img (7).jpg" alt="img15"></div>
+          <div class="card"><img src="galeria/img (7).webp" alt="img16"></div>
+          <div class="card"><img src="galeria/img (8).jpg" alt="img17"></div>
+          <div class="card"><img src="galeria/img (8).webp" alt="img18"></div>
+          <div class="card"><img src="galeria/img (9).jpg" alt="img19"></div>
+          <div class="card"><img src="galeria/img (9).webp" alt="img20"></div>
+          <div class="card"><img src="galeria/img (10).jpg" alt="img21"></div>
+          <div class="card"><img src="galeria/img (10).webp" alt="img22"></div>
+          <div class="card"><img src="galeria/img (11).jpg" alt="img23"></div>
+          <div class="card"><img src="galeria/img (11).webp" alt="img24"></div>
+          <div class="card"><img src="galeria/img (12).jpg" alt="img25"></div>
+          <div class="card"><img src="galeria/img (12).webp" alt="img26"></div>
+          <div class="card"><img src="galeria/img (13).jpg" alt="img27"></div>
+          <div class="card"><img src="galeria/img (13).webp" alt="img28"></div>
+          <div class="card"><img src="galeria/img (14).jpg" alt="img29"></div>
+          <div class="card"><img src="galeria/img (15).jpg" alt="img30"></div>
+          <div class="card"><img src="galeria/img (16).jpg" alt="img31"></div>
+          <div class="card"><img src="galeria/img (17).jpg" alt="img32"></div>
+          <div class="card"><img src="galeria/img (18).jpg" alt="img33"></div>
+          <div class="card"><img src="galeria/img (19).jpg" alt="img34"></div>
+          <div class="card"><img src="galeria/img (20).jpg" alt="img35"></div>
+          <div class="card"><img src="galeria/img (21).jpg" alt="img36"></div>
+          <div class="card"><img src="galeria/img (22).jpg" alt="img37"></div>
+          <div class="card"><img src="galeria/img (23).jpg" alt="img38"></div>
+          <div class="card"><img src="galeria/img (24).jpg" alt="img39"></div>
+          <div class="card"><img src="galeria/img (25).jpg" alt="img40"></div>
+          <div class="card"><img src="galeria/img (26).jpg" alt="img41"></div>
+          <div class="card"><img src="galeria/img (27).jpg" alt="img42"></div>
+          <div class="card"><img src="galeria/img (28).jpg" alt="img43"></div>
+          <div class="card"><img src="galeria/img (29).jpg" alt="img44"></div>
+          <div class="card"><img src="galeria/img (30).jpg" alt="img45"></div>
+          <div class="card"><img src="galeria/img (31).jpg" alt="img46"></div>
+          <div class="card"><img src="galeria/img (32).jpg" alt="img47"></div>
+          <div class="card"><img src="galeria/img (33).jpg" alt="img48"></div>
+          <div class="card"><img src="galeria/img (34).jpg" alt="img49"></div>
+          <div class="card"><img src="galeria/img (35).jpg" alt="img50"></div>
+          <div class="card"><img src="galeria/img (36).jpg" alt="img51"></div>
+          <div class="card"><img src="galeria/img (37).jpg" alt="img52"></div>
+          <div class="card"><img src="galeria/img (38).jpg" alt="img53"></div>
+          <div class="card"><img src="galeria/img (39).jpg" alt="img54"></div>
+          <div class="card"><img src="galeria/img (40).jpg" alt="img55"></div>
+          <div class="card"><img src="galeria/img (41).jpg" alt="img56"></div>
+          <div class="card"><img src="galeria/img (42).jpg" alt="img57"></div>
+          <div class="card"><img src="galeria/img (43).jpg" alt="img58"></div>
+          <div class="card"><img src="galeria/img (44).jpg" alt="img59"></div>
+          <div class="card"><img src="galeria/img (45).jpg" alt="img60"></div>
+          <div class="card"><img src="galeria/img (46).jpg" alt="img61"></div>
+          <div class="card"><img src="galeria/img (47).jpg" alt="img62"></div>
+          <div class="card"><img src="galeria/img (48).jpg" alt="img63"></div>
+          <div class="card"><img src="galeria/img (49).jpg" alt="img64"></div>
+          <div class="card"><img src="galeria/img (50).jpg" alt="img65"></div>
+          <div class="card"><img src="galeria/img (51).jpg" alt="img66"></div>
+          <div class="card"><img src="galeria/img (52).jpg" alt="img67"></div>
+          <div class="card"><img src="galeria/img (53).jpg" alt="img68"></div>
+          <div class="card"><img src="galeria/img (54).jpg" alt="img69"></div>
+          <div class="card"><img src="galeria/img (55).jpg" alt="img70"></div>
+          <div class="card"><img src="galeria/img (56).jpg" alt="img71"></div>
+          <div class="card"><img src="galeria/img (57).jpg" alt="img72"></div>
+          <div class="card"><img src="galeria/img (58).jpg" alt="img73"></div>
+          <div class="card"><img src="galeria/img (59).jpg" alt="img74"></div>
+          <div class="card"><img src="galeria/img (60).jpg" alt="img75"></div>
+          <div class="card"><img src="galeria/img (61).jpg" alt="img76"></div>
+          <div class="card"><img src="galeria/img (62).jpg" alt="img77"></div>
+        </div>
+        <button class="carousel-btn next" aria-label="Próximo">›</button>
+      </div>
     </section>
 
-    <script>
-        // Defina a data inicial (ano, mês-1, dia, hora, minuto, segundo)
-        const dataInicial = new Date(2024, 10, 3, 22, 42, 0);
+    <!-- Galeria Vídeos -->
+    <section class="continue">
+      <h2>🎬 Vídeos</h2>
+      <div class="carousel" data-carousel="videos">
+        <button class="carousel-btn prev" aria-label="Anterior">‹</button>
+        <div class="carousel-track cards">
+          <div class="card video">
+            <video controls>
+              <source src="filme/vid (1).mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="card video">
+            <video controls>
+              <source src="filme/vid (2).mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="card video">
+            <video controls>
+              <source src="filme/vid (3).mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="card video">
+            <video controls>
+              <source src="filme/vid (4).mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="card video">
+            <video controls>
+              <source src="filme/vid (5).mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="card video">
+            <video controls>
+              <source src="filme/vid (6).mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="card video">
+            <video controls>
+              <source src="filme/vid (7).mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="card video">
+            <video controls>
+              <source src="filme/vid (8).mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="card video">
+            <video controls>
+              <source src="filme/vid (9).mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="card video">
+            <video controls>
+              <source src="filme/vid (10).mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="card video">
+            <video controls>
+              <source src="filme/vid (11).mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="card video">
+            <video controls>
+              <source src="filme/vid (12).mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="card video">
+            <video controls>
+              <source src="filme/vid (13).mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="card video">
+            <video controls>
+              <source src="filme/vid (14).mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="card video">
+            <video controls>
+              <source src="filme/vid (15).mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="card video">
+            <video controls>
+              <source src="filme/vid (16).mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="card video">
+            <video controls>
+              <source src="filme/vid (17).mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="card video">
+            <video controls>
+              <source src="filme/vid (18).mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="card video">
+            <video controls>
+              <source src="filme/vid (19).mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="card video">
+            <video controls>
+              <source src="filme/vid (20).mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="card video">
+            <video controls>
+              <source src="filme/vid (21).mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="card video">
+            <video controls>
+              <source src="filme/vid (22).mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="card video">
+            <video controls>
+              <source src="filme/vid (23).mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="card video">
+            <video controls>
+              <source src="filme/vid (24).mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="card video">
+            <video controls>
+              <source src="filme/vid (25).mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="card video">
+            <video controls>
+              <source src="filme/vid (26).mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="card video">
+            <video controls>
+              <source src="filme/vid (27).mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="card video">
+            <video controls>
+              <source src="filme/vid (28).mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="card video">
+            <video controls>
+              <source src="filme/vid (29).mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="card video">
+            <video controls>
+              <source src="filme/vid (30).mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="card video">
+            <video controls>
+              <source src="filme/vid (31).mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="card video">
+            <video controls>
+              <source src="filme/vid (32).mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="card video">
+            <video controls>
+              <source src="filme/vid (33).mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="card video">
+            <video controls>
+              <source src="filme/vid (34).mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="card video">
+            <video controls>
+              <source src="filme/vid (35).mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="card video">
+            <video controls>
+              <source src="filme/vid (36).mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="card video">
+            <video controls>
+              <source src="filme/vid (37).mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="card video">
+            <video controls>
+              <source src="filme/vid (38).mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="card video">
+            <video controls>
+              <source src="filme/vid (39).mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="card video">
+            <video controls>
+              <source src="filme/vid (40).mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="card video">
+            <video controls>
+              <source src="filme/vid (41).mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="card video">
+            <video controls>
+              <source src="filme/vid (42).mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <button class="carousel-btn next" aria-label="Próximo">›</button>
+      </div>
+    </section>
 
-        function atualizarCronometro() {
-            const agora = new Date();
-            let anos = agora.getFullYear() - dataInicial.getFullYear();
-            let meses = agora.getMonth() - dataInicial.getMonth();
-            let dias = agora.getDate() - dataInicial.getDate();
-            let horas = agora.getHours() - dataInicial.getHours();
-            let minutos = agora.getMinutes() - dataInicial.getMinutes();
-            let segundos = agora.getSeconds() - dataInicial.getSeconds();
+    <!-- Section do Cronômetro NETLOVE -->
+    <section class="continue cronometro-section">
+      <h2>⏳ Cronômetro</h2>
+      <div id="cronometro" class="cronometro"></div>
+    </section>
 
-            if (segundos < 0) {
-                segundos += 60;
-                minutos--;
-            }
-            if (minutos < 0) {
-                minutos += 60;
-                horas--;
-            }
-            if (horas < 0) {
-                horas += 24;
-                dias--;
-            }
-            if (dias < 0) {
-                // Ajuste para o mês anterior
-                const mesAnterior = new Date(agora.getFullYear(), agora.getMonth(), 0);
-                dias += mesAnterior.getDate();
-                meses--;
-            }
-            if (meses < 0) {
-                meses += 12;
-                anos--;
-            }
+    <!-- Modal para tela cheia -->
+    <div id="fullscreen-modal" class="fullscreen-modal" style="display:none;">
+      <span class="close-modal">&times;</span>
+      <div class="modal-content"></div>
+    </div>
+  </main>
 
-            document.getElementById('cronometro').innerHTML =
-                `<strong>Estamos Conectados Faz:</strong><br>
-        ${anos} anos, ${meses} meses, ${dias} dias,<br>
-        ${horas} horas, ${minutos} minutos, ${segundos} segundos`;
-        }
+  <script src="config.js"></script>
 
-        setInterval(atualizarCronometro, 1000);
-        atualizarCronometro();
-
-        function check() {
-            const wrapper = document.querySelector('.wrapper');
-            const cks = document.querySelectorAll('.wrapper input[type="checkbox"]');
-            if (cks[0].checked && cks[1].checked && cks[2].checked) {
-                wrapper.classList.add('throb');
-            } else {
-                wrapper.classList.remove('throb');
-            }
-        }
-    </script>
 </body>
 
 </html>

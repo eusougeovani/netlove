@@ -1,325 +1,385 @@
-body {
+/* ===== RESET ===== */
+* {
   margin: 0;
-  background-color: #141414;
-  color: white;
-  font-family: 'Roboto', sans-serif;
+  padding: 0;
+  box-sizing: border-box;
 }
-svg {
-  overflow: visible;
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: #141414;
+  color: #fff;
+  line-height: 1.5;
 }
-svg path#line {
-  fill: none;
-  stroke: #e00000;
-  stroke-width: 2;
-  stroke-linecap: butt;
-  stroke-linejoin: round;
-  stroke-miterlimit: 4;
-  stroke-dasharray:none;
-  stroke-opacity: 1;
-  stroke-dasharray: 1;
-  stroke-dashoffset: 1;
-  animation: dash 4s linear infinite;
-}
-svg path#heart {
-  transform-origin: 50% 50%;
-  animation: blink 4s linear infinite;
-}
-@keyframes dash {
-  0% {
-    stroke-dashoffset: 1;
-  }
-  80% {
-    stroke-dashoffset: 0;
-  }
-  100% {
-    stroke-dashoffset: 0;
-  }
-}
-@keyframes blink {
-  0% {
-    opacity: 0;
-    transform: scale(0);
-  }
-  60% {
-    opacity: 0;
-    transform: scale(0);
-  }
-  70% {
-    opacity: 1;
-    transform: scale(1.2);
-  }
-  75% {
-    opacity: 1;
-    transform: scale(1.0);
-  }
-  80% {
-    opacity: 1;
-    transform: scale(1.2);
-  }
-  85% {
-    opacity: 1;
-    transform: scale(1.0);
-  }
-  100% {
-    opacity: 0;
-    transform: scale(1.0);
-  }
-}
-header {
+
+/* ===== TOPO ===== */
+.topbar {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: center;
-  background-color: #111;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
   padding: 1rem 2rem;
-  flex-wrap: wrap;
-  flex-direction: row;
-  gap: 1rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
 }
-.logo {
-  width: 150px;      /* ajuste o tamanho conforme desejar */
-  height: auto;
+
+.topbar .logo {
+  height: 48px;
+  width: auto;
   display: block;
-  width: 120px;
-  min-width: 80px;
-  max-width: 180px;
 }
-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-  margin-top: 0.5rem;
-}
-nav a {
-  color: white;
-  font-weight: bold;
-  font-size: 1rem;
-  transition: color 0.3s, transform 0.3s;
-  padding: 0.5rem 1rem;
-  margin-left: 1.5rem;
+
+.topbar .icons a {
+  color: #fff;
+  font-size: 1.3rem;
+  margin-left: 1rem;
   text-decoration: none;
-  margin-left: 0;
-  margin-right: 1rem;
+  transition: transform 0.3s, color 0.3s;
 }
-nav a:hover {
+
+.topbar .icons a:hover {
+  transform: scale(1.2);
   color: #e50914;
-  transform: scale(1.05);
 }
-/* Centraliza o conteúdo do main */
-main {
+
+/* ===== HERO (Destaque) ===== */
+.hero {
+  position: relative;
+  height: 90vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(70%);
+}
+
+.hero-content {
+  position: absolute;
+  bottom: 20%;
+  left: 5%;
+  max-width: 600px;
+}
+
+.hero .title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero .title span {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.hero p {
+  font-size: 1rem;
+  max-width: 500px;
+  margin-bottom: 1.5rem;
+  color: #e5e5e5;
+}
+
+.hero .buttons {
   display: flex;
-  flex-direction: column;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.7rem 1.5rem;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 0.3rem;
+  transition: background 0.3s;
+}
+
+.btn.play {
+  background: #fff;
+  color: #000;
+}
+
+.btn.play:hover {
+  background: #e6e6e6;
+}
+
+.btn.info {
+  background: rgba(109, 109, 110, 0.7);
+  color: #fff;
+}
+
+.btn.info:hover {
+  background: rgba(109, 109, 110, 0.4);
+}
+
+/* ===== SEÇÕES DE GALERIA ===== */
+.continue {
+  padding: 2rem;
+}
+
+.continue h2 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.cards {
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  justify-content: center;
+}
+
+.card {
+  min-width: 160px;
+  max-width: 180px;
+  height: 120px;
+  flex: 0 0 auto;
+  border-radius: 0.3rem;
+  overflow: hidden;
+  background: #222;
+  display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 70vh;
+  opacity: 1;
+  transition: opacity 0.3s;
 }
-/* Ajustes para telas pequenas */
-@media (max-width: 600px) {
-  header {
-    flex-direction: column;
-    align-items: center;
+
+.card img,
+.card video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.3rem;
+  transition: transform 0.3s;
+}
+
+.card img:hover,
+.card video:hover {
+  transform: scale(1.08);
+}
+
+.card.fade-in {
+  opacity: 0;
+  animation: fadeInCard 0.3s forwards;
+}
+
+.card.fade-out {
+  opacity: 1;
+  animation: fadeOutCard 0.2s forwards;
+}
+
+@keyframes fadeInCard {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeOutCard {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* ===== CARROSSEL ===== */
+.carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 100vw;
+}
+
+.carousel-track {
+  scroll-behavior: smooth;
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  width: 100%;
+  justify-content: center;
+}
+
+.carousel-btn {
+  background: rgba(20, 20, 20, 0.7);
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+  transition: background 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-btn:hover {
+  background: #e50914;
+  color: #fff;
+}
+
+/* ===== MODAL TELA CHEIA ===== */
+.fullscreen-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  flex-direction: column;
+}
+
+.fullscreen-modal .close-modal {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 3rem;
+  color: #fff;
+  cursor: pointer;
+  z-index: 10000;
+  transition: color 0.2s;
+}
+
+.fullscreen-modal .close-modal:hover {
+  color: #e50914;
+}
+
+.fullscreen-modal .modal-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+/* ===== LINKS DAS SEÇÕES ===== */
+.section-link {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.section-link h2 {
+  margin-bottom: 0;
+  transition: color 0.2s;
+}
+
+.section-link:hover h2 {
+  color: #e50914;
+}
+
+/* ===== CRONÔMETRO HOME ===== */
+.cronometro-section {
+  /* Segue padrão das seções .continue */
+  padding: 2rem;
+  max-width: 600px;
+  margin: 2rem auto;
+  background: linear-gradient(135deg, #1a1a1a 80%, #e50914 100%);
+  border-radius: 18px;
+  box-shadow: 0 6px 32px rgba(229, 9, 20, 0.1), 0 1.5px 0 #e50914 inset;
+  text-align: center;
+  color: #fff;
+}
+
+.cronometro-section h2 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.cronometro {
+  font-size: 1.3rem;
+  margin-top: 0.5rem;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 12px;
+  padding: 1.2rem 1.5rem;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
+  color: #fff;
+  letter-spacing: 1px;
+  font-family: "Roboto", "Short Stack", cursive, sans-serif;
+}
+
+/* Responsividade */
+@media (max-width: 700px) {
+  .cronometro-section {
     padding: 1rem 0.5rem;
+    max-width: 98vw;
+  }
+  .cronometro {
+    font-size: 1.1rem;
+    padding: 0.7rem 0.5rem;
+  }
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 1200px) {
+  .card {
+    min-width: 140px;
+    max-width: 150px;
+    height: 100px;
+  }
+}
+@media (max-width: 900px) {
+  .card {
+    min-width: 110px;
+    max-width: 120px;
+    height: 80px;
+  }
+}
+@media (max-width: 500px) {
+  .card {
+    min-width: 80px;
+    max-width: 90px;
+    height: 60px;
+  }
+}
+@media (max-width: 768px) {
+  .hero .title {
+    font-size: 2rem;
   }
 
-  .logo {
-    width: 90px;
-    margin-bottom: 0.5rem;
+  .hero-content {
+    max-width: 90%;
+    bottom: 15%;
   }
 
-  .gallery {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
-    padding: 0.5rem;
+  .cards {
+    gap: 0.5rem;
   }
 
   .card {
-    padding: 0.5rem;
-    max-width: 95vw;
+    min-width: 120px;
+    max-width: 120px;
+    height: 80px;
   }
 
-  .card img {
-    max-height: 30vh;
+  .carousel-btn {
+    font-size: 1.5rem;
+    width: 2rem;
+    height: 2rem;
   }
-}
-.cronometro {
-  text-align: center;
-  font-size: 2rem;
-  margin-top: 2rem;
-  background: rgba(255,255,255,0.07);
-  border-radius: 12px;
-  padding: 2rem 2.5rem;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
-  color: #fff;
-  font-family: 'Roboto', 'Short Stack', cursive, sans-serif;
-  letter-spacing: 1px;
-}
-.cartinha {
-  max-width: 480px;
-  margin: 2rem auto;
-  padding: 2rem 1.5rem;
-  background: linear-gradient(135deg, #1a1a1a 80%, #ffb6c1 100%);
-  border-radius: 18px 18px 32px 32px;
-  box-shadow: 0 6px 32px rgba(229,9,20,0.15), 0 1.5px 0 #e50914 inset;
-  border: 2px solid #e50914;
-  color: #fff;
-  text-align: center;
-  font-size: 1.2rem;
-  font-family: 'Roboto', 'Short Stack', cursive, sans-serif;
-  letter-spacing: 0.5px;
-  position: relative;
-}
-.cartinha::before {
-  content: "💌";
-  font-size: 2.2rem;
-  position: absolute;
-  top: -1.2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #141414;
-  border-radius: 50%;
-  padding: 0.2rem 0.7rem;
-  border: 2px solid #e50914;
-}
-.cartinha::after {
-  content: "";
-  display: block;
-  margin: 1.2rem auto 0 auto;
-  width: 60px;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #e50914 60%, transparent);
-  border-radius: 1px;
-}
-/* Animação interativa do "I love you" */
-@-webkit-keyframes throb{
-  0%{ -webkit-transform: scale(1);}
-  35%{ -webkit-transform: scale(1.2);}
-  85%{ -webkit-transform: scale(1);}
-}
-@keyframes throb {
-  0% { transform: scale(1);}
-  35% { transform: scale(1.2);}
-  85% { transform: scale(1);}
-}
-.wrapper {
-  width: 90vmin;
-  height: 90vmin;
-  position: relative;
-  margin: 5vmin auto;
-}
-div.throb {
-  -webkit-animation: throb 0.5s infinite;
-  animation: throb 0.5s infinite;
-  animation-delay: 0.8s;
-}
-input[type="checkbox"] {
-  display: none;
-}
-input[type="checkbox"] + label {
-  width: 30vmin; height: 30vmin;
-  line-height: 30vmin;
-  display: inline-block;
-  position: absolute;
-  font-size: 30vmin;
-  text-align: center;
-  transition: all 1s ease;
-}
-label {
-  text-shadow: 3vmin 3vmin 10vmin rgba(0,0,0,0.5);
-}
-label:hover {
-  color: #c32a2a;
-  cursor: pointer;
-}
-#ck1 + label,
-#ck2 + label {
-  border-radius: 50%;
-  top: 0;
-}
-#ck1:checked + label,
-#ck2:checked + label,
-#ck3:checked + label {
-  background: #c32a2a;
-  font-size: 0;
-  transition: all 1s ease;
-}
-#ck1 + label {
-  left: 0;
-}
-#ck2 + label {
-  right: 10vmin;
-}
-#ck1:checked + label,
-#ck2:checked + label {
-  width: 54vmin; height: 54vmin;
-  border-radius: 50%;
-  line-height: 54vmin;
-}
-#ck2:checked + label {
-  right: 0;
-}
-#ck3 + label {
-  bottom: 5vmin; left: 50%;
-  margin: 0 -9vmin;
-  background-color: #141414;
-}
-#ck3:checked + label {
-  width: 49.5vmin; height: 49.5vmin;
-  bottom: 17.28vmin; left: 29.16vmin;
-  transform: rotate(45deg);
-  line-height: 4.86vmin;
-}
-span {
-  display: inline-block;
-  text-align: left;
-  position: absolute;
-  bottom: 0vmin; left: 0vmin;
-  margin-bottom: -3vmin;
-  font-size: 6vmin;
-  color: #999;
-}
-.youtube-playlist {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 2.5rem auto 2rem auto;
-  padding: 1.5rem 0;
-  background: linear-gradient(135deg, #1a1a1a 80%, #e50914 100%);
-  border-radius: 18px;
-  box-shadow: 0 6px 32px rgba(229,9,20,0.10), 0 1.5px 0 #e50914 inset;
-  max-width: 650px;
-}
 
-.youtube-playlist iframe {
-  width: 100%;
-  max-width: 560px;
-  height: 315px;
-  border-radius: 12px;
-  border: 3px solid #e50914;
-  background: #000;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
-  margin: 0 auto;
-  display: block;
-}
-
-/* Responsividade para mobile */
-@media (max-width: 700px) {
-  .youtube-playlist {
-    padding: 1rem 0.2rem;
-    max-width: 98vw;
+  .fullscreen-modal .close-modal {
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
   }
-  .youtube-playlist iframe {
-    max-width: 98vw;
-    height: 56vw; /* 16:9 ratio */
-    min-height: 180px;
-  }
-}
-.playlist-title {
-  color: #fff;
-  font-family: 'Short Stack', 'Roboto', cursive, sans-serif;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  text-align: center;
-  letter-spacing: 1px;
-  text-shadow: 0 2px 8px #e50914;
 }
